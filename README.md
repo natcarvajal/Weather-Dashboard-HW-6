@@ -26,7 +26,8 @@ So that they can plan a trip accordingly
 * THEN I am presented with the last searched city forecast
 
   
-  ## Image of Work Day Scheduler: ##
+ 
+ ## Image of Work Day Scheduler: ##
   
   ![Landing page of the Weather Dashboard]()
   
