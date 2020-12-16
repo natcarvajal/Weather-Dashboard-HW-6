@@ -6,6 +6,7 @@
   <title>Weather Dashboard</title>
   <!-- bootsrap link -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css" type="text/css">
 
 </head>
 
@@ -13,9 +14,10 @@
     <nav class="navbar navbar-dark bg-dark">
         <div class="col text-center">
              <span class="navbar-brand mb-0 h1">Weather Dashboard</span>
+             <p id="currentDay" class="lead"></p>
         </div>
       </nav>
-
+    
 <!-- WHEN I search for a city
     THEN I am presented with current and future conditions for that city and that city is added to the search history
     WHEN I view current weather conditions for that city
@@ -30,7 +32,10 @@
     THEN I am presented with the last searched city forecast -->
 
   <!-- Add extra div for the bonus Fahrenheit temp -->
+  <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+
   <script>
 
         var APIKey = "beefdab294cbf81ff26e12192d4e7200";
