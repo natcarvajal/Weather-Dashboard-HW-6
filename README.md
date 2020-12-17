@@ -1,8 +1,8 @@
 # Weather-Dashboard-HW-6
 
-(EDIT) This week’s homework required to create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+This week’s homework required to build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.
+I used [OpenWeather API](https://openweathermap.org/) to retrieve weather data for cities. I used  localStorage throoughout the application to store any persistent data.
 
-* I chose [Day.js](https://day.js.org/) as my library.
 
 ## Purpose: ##
 
