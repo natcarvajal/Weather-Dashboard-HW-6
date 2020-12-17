@@ -1,5 +1,5 @@
 body {
-  background-image: radial-gradient(#6247aa, #c19ee0);
+  background-image: repeating-linear-gradient(to left, #6247aa, #dec9e9);
 }
 .navbar-brand {
   font-family: "Luckiest Guy", cursive;
@@ -7,15 +7,11 @@ body {
   color: #fffffc;
 }
 
-h2 {
-  font-family: "Raleway", sans-serif;
-  color: #fffffc;
-}
 .jumbotron {
   font-family: "Raleway", sans-serif;
   float: right;
   width: 100%;
-  margin-top: -75px;
+  margin-top: -100px;
   margin-right: 40px;
   color: #fffffc;
   background: transparent;
