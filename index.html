@@ -7,43 +7,49 @@
   <!-- bootsrap link -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="./style.css" type="text/css">
-
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Raleway&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <nav class="navbar navbar-dark bg-dark">
-        <div class="col text-center">
-             <span class="navbar-brand mb-0 h1">Weather Dashboard</span>
-             <p id="currentDay" class="lead"></p>
+        <nav class="navbar navbar bg">
+            <div class="col text-center">
+                <span class="navbar-brand mb-0 h1">Weather Dashboard</span>
+            </div>
+        </nav>
+        <h2>Search for City</h2>
+         <form class="form-inline col-sm-5">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light my-2 my-sm-0 form-inline" type="submit">Search</button>
+        </form>    
+        <div class="jumbotron col-sm-7">
+            <h1 class="display-4">City/Date</h1>
+            <p>Temp:</p>
+            <p>Humidity:</p>
+            <p>Windspeed:</p>
+            <p>UV Index:</p>
+            <hr class="my-4">
+            <!-- 5 day forecast goes below (cards) -->
+            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+
         </div>
-      </nav>
-    
-<!-- WHEN I search for a city
-    THEN I am presented with current and future conditions for that city and that city is added to the search history
-    WHEN I view current weather conditions for that city
-    THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
-    WHEN I view the UV index
-    THEN I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
-    WHEN I view future weather conditions for that city
-    THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, and the humidity
-    WHEN I click on a city in the search history
-    THEN I am again presented with current and future conditions for that city
-    WHEN I open the weather dashboard
-    THEN I am presented with the last searched city forecast -->
+        
+        <!-- WHEN I search for a city
+        THEN I am presented with current and future conditions for that city and that city is added to the search history
+        WHEN I view current weather conditions for that city
+        THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
+        WHEN I view the UV index
+        THEN I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
+        WHEN I view future weather conditions for that city
+        THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, and the humidity
+        WHEN I click on a city in the search history
+        THEN I am again presented with current and future conditions for that city
+        WHEN I open the weather dashboard
+        THEN I am presented with the last searched city forecast -->
 
-  <!-- Add extra div for the bonus Fahrenheit temp -->
-  <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="script.js"></script>
-
-  <script>
-
-        var APIKey = "beefdab294cbf81ff26e12192d4e7200";
-
-    // Here we are building the URL we need to query the database
-    var queryURL = "https://api.openweathermap.org/data/2.5/weather?" +
-      "q=Bujumbura,Burundi&appid=" + APIKey;
-  </script>
+        <!-- Add extra div for the bonus Fahrenheit temp -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="script.js"></script>
 </body>
 
 </html>

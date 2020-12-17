@@ -1,6 +1,22 @@
-.navbar-brand {
-  font-size: 42px;
+body {
+  background-image: radial-gradient(#6247aa, #c19ee0);
 }
-#currentDay {
-  color: aliceblue;
+.navbar-brand {
+  font-family: "Luckiest Guy", cursive;
+  font-size: 76px;
+  color: #fffffc;
+}
+
+h2 {
+  font-family: "Raleway", sans-serif;
+  color: #fffffc;
+}
+.jumbotron {
+  font-family: "Raleway", sans-serif;
+  float: right;
+  width: 100%;
+  margin-top: -75px;
+  margin-right: 40px;
+  color: #fffffc;
+  background: transparent;
 }
