@@ -6,9 +6,11 @@ I used [OpenWeather API](https://openweathermap.org/) to retrieve weather data f
 
 ## Purpose: ##
 
-* User is a traveler
-* They want to see the weather outlook for multiple cities
-* So that they can plan a trip accordingly
+User is a traveler
+<br>
+They want to see the weather outlook for multiple cities
+<br>
+So that they can plan a trip accordingly
 
 ## Criteria Includes: ##
 
