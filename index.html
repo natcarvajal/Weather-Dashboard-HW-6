@@ -1,55 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Weather Dashboard</title>
+    <!-- bootsrap link -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/7c715641eb.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <title>Weather Dashboard</title>
-  <!-- bootsrap link -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="./style.css" type="text/css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Raleway&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/7c715641eb.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
-        <nav class="navbar navbar bg">
-            <div class="col text-center">
-                <span class="navbar-brand mb-0 h1">Weather Dashboard</span>
-            </div>
-        </nav>
-         <form class="form-inline col-sm-4">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search for City" aria-label="Search">
-            <button class="btn btn-outline-light my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
-        </form>    
-        <div class="jumbotron col-sm-8">
-            <h1 class="display-4">City/Date</h1>
-            <p>Temp:</p>
-            <p>Humidity:</p>
-            <p>Windspeed:</p>
-            <p>UV Index:</p>
-            <hr class="my-4">
-            <!-- 5 day forecast goes below (cards) -->
-            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-
+  <body>
+    <nav class="navbar navbar bg">
+      <div class="col text-center">
+        <span class="navbar-brand mb-0 h1">Weather Dashboard</span>
+        <p id="currentDay" class="lead"></p>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <form class="form-inline col-sm-4 col-md">
+          <input
+            id="inputValue"
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Enter a City"
+            aria-label="Search"
+          />
+          <button
+            id="button"
+            class="btn btn-outline-light my-2 my-sm-0"
+            value="submit"
+          >
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+        <h1 id="search"></h1>
+        <div class="jumbotron col-sm-8 col-md">
+          <div id="weather_result"></div>
+          <h1 class="display-4"></h1>
+          <div class="temperature"></div>
+          <div class="humidity"></div>
+          <div class="windspeed"></div>
+          <div class="uv-index"></div>
+          <hr class="my-4" />
+          <!-- 5 day forecast goes below (cards) -->
+          <p>
+            It uses utility classes for typography and spacing to space content
+            out within the larger container.
+          </p>
         </div>
-        
-        <!-- WHEN I search for a city
-        THEN I am presented with current and future conditions for that city and that city is added to the search history
-        WHEN I view current weather conditions for that city
-        THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
-        WHEN I view the UV index
-        THEN I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
-        WHEN I view future weather conditions for that city
-        THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, and the humidity
-        WHEN I click on a city in the search history
-        THEN I am again presented with current and future conditions for that city
-        WHEN I open the weather dashboard
-        THEN I am presented with the last searched city forecast -->
+      </div>
+    </div>
 
-        <!-- Add extra div for the bonus Fahrenheit temp -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="script.js"></script>
-</body>
-
+    <!-- Add extra div for the bonus Fahrenheit temp -->
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
