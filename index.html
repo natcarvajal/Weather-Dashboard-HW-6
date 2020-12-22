@@ -23,15 +23,16 @@
   </head>
 
   <body>
-    <nav class="navbar navbar bg">
-      <div class="col text-center">
-        <span class="navbar-brand mb-0 h1">Weather Dashboard</span>
-        <p id="currentDay" class="lead"></p>
-      </div>
-    </nav>
     <div class="container">
+      <nav class="navbar navbar bg">
+          <div class="row">
+            <span class="navbar-brand mb-0 h1">Weather Dashboard</span>
+          </div>
+        </div>       
+        </div>
+      </nav>
       <div class="row">
-        <form class="form-inline col-sm-4 col-md">
+        <form class="form-inline col-sm-4">
           <input
             id="inputValue"
             class="form-control mr-sm-2"
@@ -40,33 +41,29 @@
             aria-label="Search"
           />
           <button
-            id="button"
+            id="add-city"
             class="btn btn-outline-light my-2 my-sm-0"
             value="submit"
           >
             <i class="fas fa-search"></i>
           </button>
         </form>
-        <h1 id="search"></h1>
-        <div class="jumbotron col-sm-8 col-md">
-          <div id="weather_result"></div>
-          <h1 class="display-4"></h1>
-          <div class="temperature">Temperature:</div>
-          <div class="humidity">Humidity:</div>
-          <div class="windspeed">WindSpeed:</div>
-          <div class="uv-index">UV Index:</div>
-          <hr class="my-4" />
-          <!-- 5 day forecast goes below (cards) -->
-          <p>
-            It uses utility classes for typography and spacing to space content
-            out within the larger container.
-          </p>
-        </div>
-      </div>
+        <div id="buttons-view"></div>
+    </div>
+    <div id = "city-view" class="jumbotron col-sm-8 col-md">
+      <!-- <h1 class="display-4"></h1>
+      <div class="temperature"></div>
+      <div class="humidity"></div>
+      <div class="windspeed"></div>
+      <div class="uv-index"></div> -->
+      <hr class="my-4" />
+      <!-- 5 day forecast goes below (cards) -->
+      <p>
+        It uses utility classes for typography and spacing to space content out
+        within the larger container.
+      </p>
     </div>
 
-    <!-- Add extra div for the bonus Fahrenheit temp -->
-    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="script.js"></script>
   </body>
