@@ -25,10 +25,8 @@
   <body>
     <div class="container">
       <nav class="navbar navbar bg">
-          <div class="row">
-            <span class="navbar-brand mb-0 h1">Weather Dashboard</span>
-          </div>
-        </div>       
+        <div class="row">
+          <span id="title" class="navbar-brand text-center">Weather Dashboard</span>
         </div>
       </nav>
       <div class="row">
@@ -36,7 +34,7 @@
           <input
             id="inputValue"
             class="form-control mr-sm-2"
-            type="search"
+            type=""
             placeholder="Enter a City"
             aria-label="Search"
           />
@@ -48,18 +46,25 @@
             <i class="fas fa-search"></i>
           </button>
         </form>
+      </div>
+      <div class="row">
         <div id="buttons-view"></div>
+      </div>
+      <br /><br />
+      <div class="row">
+        <div class="col-sm-12 col-lg-6">
+          <div id="searched_city"></div>
+        </div>
+      </div>
+    <!-- <div class="wrapper">
+      <div id = "city-view" class="jumbotron col-sm-12 col-md col-lg-6">
+      <hr class="my-4" /> -->
+    <!-- 5 day forecast goes below (cards) -->
+    <hr />
+    <div class="col-sm-12">
+      <h2 id="forecast">5-Day Forecast:</h2>
+      <div id="results"></div>
     </div>
-    <div id = "city-view" class="jumbotron col-sm-8 col-md">
-   
-      <hr class="my-4" />
-      <!-- 5 day forecast goes below (cards) -->
-      <p>
-        It uses utility classes for typography and spacing to space content out
-        within the larger container.
-      </p>
-    </div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="script.js"></script>
   </body>

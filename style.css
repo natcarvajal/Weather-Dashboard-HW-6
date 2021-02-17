@@ -1,18 +1,48 @@
 body {
   background-image: repeating-linear-gradient(to left, #6247aa, #dec9e9);
 }
-.navbar-brand {
+#title {
   font-family: "Luckiest Guy", cursive;
   font-size: 76px;
   color: #fffffc;
-  display: inline-block;
-  float: none;
-  vertical-align: top;
 }
-
-.jumbotron {
+button {
   font-family: "Raleway", sans-serif;
-  float: right;
   color: #fffffc;
   background: transparent;
+  border: none;
+}
+/* .jumbotron {
+  background: transparent;
+  font-family: "Raleway", sans-serif;
+  color: #fffffc;
+  border: none;
+} */
+
+#searched_city {
+  font-family: "Raleway", sans-serif;
+  color: #fffffc;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+.icard {
+  display: inline-block;
+  font-family: "Raleway", sans-serif;
+  width: 32%;
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+  margin-left: 1%;
+  margin-top: 1%;
+  margin-bottom: 3%;
+}
+
+#forecast {
+  margin-left: 3%;
+  font-family: "Raleway", sans-serif;
+  color: #fffffc;
 }
