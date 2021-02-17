@@ -1,56 +1,62 @@
 var APIKey = "beefdab294cbf81ff26e12192d4e7200";
 
 $(document).ready(function () {
-  var cities = [];
+  if (localStorage.getItem("cities")) {
+    var cities = JSON.parse(localStorage.getItem("cities"));
+    renderButtons();
+  } else {
+    var cities = [];
+  }
   function weatherInfo() {
     var city = $(this).attr("data-name");
+    get_weather_from_city(city);
 
-    $.ajax({
-      url:
-        "https://api.openweathermap.org/data/2.5/forecast?q=" +
-        city +
-        "&units=imperial&appid=" +
-        APIKey,
-      method: "GET",
-    }).then((response) => {
-      show_all(response, "#results");
-      console.log(response);
+    // $.ajax({
+    //   url:
+    //     "https://api.openweathermap.org/data/2.5/forecast?q=" +
+    //     city +
+    //     "&units=imperial&appid=" +
+    //     APIKey,
+    //   method: "GET",
+    // }).then((response) => {
+    //   show_all(response, "#results");
+    //   console.log(response);
 
-      var cityDiv = $("<div class='city'>");
+    //   var cityDiv = $("<div class='city'>");
 
-      var name = $("<h1>").text(response.city.name);
-      cityDiv.append(name);
+    //   var name = $("<h1>").text(response.city.name);
+    //   cityDiv.append(name);
 
-      var date = $("<h2>").text(response.list[0].dt_txt);
-      cityDiv.append(date);
+    //   var date = $("<h2>").text(response.list[0].dt_txt);
+    //   cityDiv.append(date);
 
-      var icon = $("<img>").text(response.list[0].icon);
+    //   var icon = $("<img>").text(response.list[0].icon);
 
-      cityDiv.append(icon);
+    //   cityDiv.append(icon);
 
-      var temp = $("<p>").text(
-        "Temperature: " + response.list[0].main.temp + " °F"
-      );
-      cityDiv.append(temp);
+    //   var temp = $("<p>").text(
+    //     "Temperature: " + response.list[0].main.temp + " °F"
+    //   );
+    //   cityDiv.append(temp);
 
-      var tempFeels = $("<p>").text(
-        "Feels Like: " + response.list[0].main.feels_like + " °F"
-      );
-      cityDiv.append(tempFeels);
+    //   var tempFeels = $("<p>").text(
+    //     "Feels Like: " + response.list[0].main.feels_like + " °F"
+    //   );
+    //   cityDiv.append(tempFeels);
 
-      var humidity = $("<p>").text(
-        "Humidity: " + response.list[0].main.humidity + " %"
-        // response.list.forecast.humidity.unit
-      );
-      cityDiv.append(humidity);
+    //   var humidity = $("<p>").text(
+    //     "Humidity: " + response.list[0].main.humidity + " %"
+    //     // response.list.forecast.humidity.unit
+    //   );
+    //   cityDiv.append(humidity);
 
-      var windSpeed = $("<p>").text(
-        "Windspeed: " + response.list[0].wind.speed + " MPH"
-      );
-      cityDiv.append(windSpeed);
+    //   var windSpeed = $("<p>").text(
+    //     "Windspeed: " + response.list[0].wind.speed + " MPH"
+    //   );
+    //   cityDiv.append(windSpeed);
 
-      $("#city-view").prepend(cityDiv);
-    });
+    //   $("#city-view").prepend(cityDiv);
+    // });
   }
   function renderButtons() {
     $("#buttons-view").empty();
@@ -67,6 +73,8 @@ $(document).ready(function () {
     event.preventDefault();
     var city = $("#inputValue").val().trim();
     cities.push(city);
+    // Store
+    localStorage.setItem("cities", JSON.stringify(cities));
     get_weather_from_city(city);
     renderButtons();
   });
@@ -75,14 +83,13 @@ $(document).ready(function () {
   renderButtons();
 });
 
-$("#results").html("");
-
 function get_weather_from_city(city) {
+  $("#results").html("");
   var lat_long_converter = `https://api.opencagedata.com/geocode/v1/json?q=${city}&key=186b21989f4f41248158d08544154950`;
   $.get(lat_long_converter, (data) => {
     console.log(data);
-    $("#searched_city").append(`<h2>${data.results[0].formatted}</h2>`);
-    $("#searched_city").append(`<h3>${data.timestamp.created_http}</h3>`);
+    $("#searched_city").html(`<h2>${data.results[0].formatted}</h2>`);
+    $("#searched_city").html(`<h3>${data.timestamp.created_http}</h3>`);
     let lat = data.results[0].geometry.lat;
     let lng = data.results[0].geometry.lng;
     var one_call = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lng}&exclude=hour&units=imperial&appid=${APIKey}`;
@@ -111,8 +118,8 @@ function get_weather_from_city(city) {
 }
 
 get_weather_from_city(city);
-{
-  /* <p>
+
+/* <p>
         <h1>5-Day Forecast</h1>
         <div class="card" style="width: 18rem;">
           <div class="card-body">
@@ -124,4 +131,3 @@ get_weather_from_city(city);
           </div>
         </div>
       </p> */
-}
