@@ -38,7 +38,7 @@ So that they can plan a trip accordingly
       HTML, CSS, Bootstrap, JavaScript, Jquery 
       
  ## Deployed Sites ##
-* [Github Repo]()
+* [Github Repo](https://github.com/natcarvajal/Weather-Dashboard-HW-6)
 * [Deployed Link]()
 
 
