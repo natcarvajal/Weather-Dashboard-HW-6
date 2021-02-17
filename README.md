@@ -39,6 +39,6 @@ So that they can plan a trip accordingly
       
  ## Deployed Sites ##
 * [Github Repo](https://github.com/natcarvajal/Weather-Dashboard-HW-6)
-* [Deployed Link]( https://natcarvajal.github.io/Weather-Dashboard-HW-6/)
+* [Deployed Link](https://natcarvajal.github.io/Weather-Dashboard-HW-6/)
 
 
