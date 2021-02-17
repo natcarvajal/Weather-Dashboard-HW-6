@@ -67,6 +67,7 @@ $(document).ready(function () {
     event.preventDefault();
     var city = $("#inputValue").val().trim();
     cities.push(city);
+    get_weather_from_city(city);
     renderButtons();
   });
 
@@ -76,7 +77,6 @@ $(document).ready(function () {
 
 $("#results").html("");
 
-// $("#city").html("");
 function get_weather_from_city(city) {
   var lat_long_converter = `https://api.opencagedata.com/geocode/v1/json?q=${city}&key=186b21989f4f41248158d08544154950`;
   $.get(lat_long_converter, (data) => {
@@ -110,7 +110,7 @@ function get_weather_from_city(city) {
   });
 }
 
-get_weather_from_city("New York");
+get_weather_from_city(city);
 {
   /* <p>
         <h1>5-Day Forecast</h1>
