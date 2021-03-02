@@ -1,14 +1,15 @@
 body {
-  background-image: repeating-linear-gradient(to left, #6247aa, #dec9e9);
+  background-image: url("./img/clouds.png");
+  background-size: cover;
 }
 #title {
   font-family: "Luckiest Guy", cursive;
   font-size: 76px;
-  color: #fffffc;
+  color: #0096c7;
 }
 button {
   font-family: "Raleway", sans-serif;
-  color: #fffffc;
+  color: #0096c7;
   background: transparent;
   border: none;
 }
@@ -21,7 +22,7 @@ button {
 
 #searched_city {
   font-family: "Raleway", sans-serif;
-  color: #fffffc;
+  color: #0096c7;
 }
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -32,7 +33,7 @@ button {
 .icard {
   display: inline-block;
   font-family: "Raleway", sans-serif;
-  width: 32%;
+  width: 18%;
   text-align: center;
   background-color: white;
   border-radius: 5px;
@@ -44,5 +45,5 @@ button {
 #forecast {
   margin-left: 3%;
   font-family: "Raleway", sans-serif;
-  color: #fffffc;
+  color: #0096c7;
 }
