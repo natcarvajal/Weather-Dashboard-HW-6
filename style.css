@@ -6,12 +6,19 @@ body {
   font-family: "Luckiest Guy", cursive;
   font-size: 76px;
   color: #0096c7;
+  margin-top: 3%;
+  margin-bottom: 5%;
 }
 button {
   font-family: "Raleway", sans-serif;
   color: #0096c7;
   background: transparent;
   border: none;
+}
+.city-btn {
+  display: flex;
+  margin-top: 20%;
+  margin-left: 1rem;
 }
 /* .jumbotron {
   background: transparent;
@@ -23,6 +30,7 @@ button {
 #searched_city {
   font-family: "Raleway", sans-serif;
   color: #0096c7;
+  display: inline;
 }
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
